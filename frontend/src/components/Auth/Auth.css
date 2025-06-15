@@ -1,0 +1,142 @@
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Main card styling */
+.auth-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem 3rem;
+  width: 100%;
+  max-width: 500px;
+  text-align: left;
+}
+
+/* Optional: blue header text (matching button) */
+.auth-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2563eb; /* a strong blue tone */
+  margin-bottom: 8px;
+}
+
+/* Clean, centered subtitle */
+.auth-header p {
+  color: #64748b;
+  font-size: 15px;
+  text-align: center;
+}
+
+.auth-icon {
+  width: 48px;
+  height: 48px;
+  color: #3b82f6;
+  margin: 0 auto 16px;
+}
+
+
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.password-toggle:hover {
+  color: #6b7280;
+}
+
+.auth-button {
+  width: 100%;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.auth-button:hover {
+  background-color: #1e40af;
+}
+
+
+.auth-button:disabled {
+  background-color: #94a3b8;
+  cursor: not-allowed;
+}
+
+.auth-footer {
+  text-align: center;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.auth-footer p {
+  color: #6b7280;
+}
+
+.auth-link {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
+
+
+.input-group {
+  display: flex;
+  align-items: center;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 10px 12px;
+  background-color: white; /* <--- make the container white */
+  transition: border 0.2s ease-in-out;
+}
+
+.input-group input {
+  border: none;
+  outline: none;
+  background-color: transparent; /* transparent is fine now because parent is white */
+  flex: 1;
+  font-size: 15px;
+  color: #1e293b;
+}
+
+
+.input-group:focus-within {
+  border-color: #2563eb;
+}
+
+.input-icon {
+  margin-right: 8px;
+  color: #64748b;
+}
+
+
+
+.input-group input::placeholder {
+  color: #94a3b8;
+}
