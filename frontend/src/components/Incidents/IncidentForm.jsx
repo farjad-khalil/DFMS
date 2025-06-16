@@ -237,6 +237,7 @@ const IncidentForm = () => {
           </div>
         </div>
 
+      </form>
         <div className="form-actions">
           <button type="button" onClick={() => navigate("/incidents")} className="btn-secondary">
             Cancel
@@ -245,7 +246,6 @@ const IncidentForm = () => {
             {loading ? "Reporting..." : "Report Incident"}
           </button>
         </div>
-      </form>
     </div>
   )
 }

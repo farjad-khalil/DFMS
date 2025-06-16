@@ -1,29 +1,28 @@
-/* Global Styles */
+/* === Global Layout === */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #e0f0ff; /* light blue background */
+  background-color: #e0f0ff;
   color: #1e293b;
 }
 
-/* Main Dashboard Container */
 .dashboard {
-  max-width: 1400px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 40px 24px;
 }
 
-/* Header */
+/* === Header === */
 .dashboard-header {
-  margin-bottom: 40px;
   text-align: center;
+  margin-bottom: 40px;
 }
 
 .dashboard-header h1 {
   font-size: 36px;
   font-weight: 700;
-  margin-bottom: 10px;
   color: #1e293b;
+  margin-bottom: 10px;
 }
 
 .dashboard-header p {
@@ -31,20 +30,22 @@ body {
   color: #475569;
 }
 
-/* Stats Grid */
+/* === Stats Section: FLEX instead of GRID === */
 .stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: space-between;
   margin-bottom: 48px;
 }
 
-/* Stat Cards */
 .stat-card {
+  flex: 1 1 300px;
+  max-width: 31%;
   background: #ffffff;
   border-radius: 16px;
   padding: 28px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   display: flex;
   align-items: center;
   gap: 16px;
@@ -53,10 +54,10 @@ body {
 
 .stat-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
-/* Icon Style */
+/* === Icon Styles === */
 .stat-icon {
   width: 52px;
   height: 52px;
@@ -67,7 +68,6 @@ body {
   color: white;
 }
 
-/* Icon Colors */
 .stat-icon.users     { background-color: #60a5fa; }
 .stat-icon.vehicles  { background-color: #6ee7b7; }
 .stat-icon.incidents { background-color: #fde68a; color: #92400e; }
@@ -75,40 +75,51 @@ body {
 .stat-icon.resolved  { background-color: #c4b5fd; }
 .stat-icon.critical  { background-color: #f9a8d4; }
 
-/* Stat Text */
+/* === Stat Text === */
 .stat-content h3 {
   font-size: 28px;
   font-weight: 700;
-  margin-bottom: 4px;
+  margin: 0 0 4px 0;
 }
 
 .stat-content p {
   font-size: 14px;
-  font-weight: 500;
   color: #64748b;
+  font-weight: 500;
+  margin: 0;
 }
 
-/* Description Box */
+/* === Description Box === */
 .description-box {
   display: flex;
   justify-content: center;
-  margin: 40px 0;
+  margin-top: 40px;
 }
 
 .description-container {
+  background: #ffffff;
   width: 60%;
   max-width: 800px;
-  background: #ffffff;
   padding: 24px;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   text-align: center;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .stats-grid {
-    grid-template-columns: 1fr;
+/* === Responsive Layouts === */
+@media (max-width: 1024px) {
+  .stat-card {
+    max-width: 48%;
+  }
+
+  .description-container {
+    width: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+  .stat-card {
+    max-width: 100%;
   }
 
   .description-container {

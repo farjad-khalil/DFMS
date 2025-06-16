@@ -31,18 +31,23 @@
 }
 
 .vehicles-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 24px;
+  justify-content: flex-start;
 }
 
+
 .vehicle-card {
+  flex: 1 1 320px;         /* Start with 320px but can grow/shrink */
+  max-width: 31%;          /* ~3 cards per row */
   background: white;
   border-radius: 12px;
   padding: 24px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s, box-shadow 0.2s;
 }
+
 
 .vehicle-card:hover {
   transform: translateY(-2px);
